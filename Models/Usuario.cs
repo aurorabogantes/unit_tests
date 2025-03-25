@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace Laboratorio8.Models
 {
@@ -13,7 +14,7 @@ namespace Laboratorio8.Models
 
         [Required]
         [EmailAddress]
-        [Index(IsUnique = true)]
+        //[Index(IsUnique = true)]
         public string Correo { get; set; }
 
         [Required]

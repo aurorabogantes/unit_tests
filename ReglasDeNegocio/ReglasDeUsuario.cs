@@ -2,9 +2,9 @@
 
 namespace Laboratorio8.ReglasDeNegocio
 {
-    public class ReglasDeUsuario
+    public static class ReglasDeUsuario
     {
-        public bool EsValido(Usuario usuario)
+        public static bool EsValido(Usuario usuario)
         {
             if (usuario == null) return false;
 
@@ -20,7 +20,7 @@ namespace Laboratorio8.ReglasDeNegocio
             return true;
         }
 
-        private bool ValidarContraseña(string contraseña)
+        private static bool ValidarContraseña(string contraseña)
         {
             var hasUpperChar = contraseña.Any(c => Char.IsUpper(c));
             var hasDigit = contraseña.Any(c => Char.IsDigit(c));
