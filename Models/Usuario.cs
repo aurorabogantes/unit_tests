@@ -6,7 +6,7 @@ namespace Laboratorio8.Models
     public class Usuario
     {
         [Key]
-        public int IdUsuario { get; set; }
+        public int? IdUsuario { get; set; }
 
         [Required]
         [StringLength(100, MinimumLength = 3)]
