@@ -8,8 +8,8 @@ namespace Laboratorio8.ReglasDeNegocio
         public static bool EsValido(Producto producto, List<Producto> productosExistentes)
         {
             if(producto == null) return false;
-             
-            if(producto.IdProducto <= 0) return false;
+
+            if (producto.IdProducto <= 0) return false;
 
             if (productosExistentes.Any(p => p.IdProducto == producto.IdProducto))
                 return false;
@@ -20,7 +20,7 @@ namespace Laboratorio8.ReglasDeNegocio
             if(producto.Precio <= 0) return false;
 
 
-            if(producto.Stock < 0 || producto.Stock == null) 
+            if(producto.Stock ==  null || producto.Stock < 0) 
                 return false;
 
             if (producto.FechaCreacion == default)

@@ -7,9 +7,12 @@ namespace Laboratorio8.ReglasDeNegocio
     {
         public static bool EsValido(Usuario usuario)
         {
-            if (usuario.IdUsuario == null) return false;
+            if (usuario == null) return false;
 
-            if(string.IsNullOrEmpty(usuario.Nombre) || usuario.Nombre.Length < 3 || usuario.Nombre.Length > 100)
+            if (usuario.IdUsuario == null)
+                return false;
+
+            if (string.IsNullOrEmpty(usuario.Nombre) || usuario.Nombre.Length < 3 || usuario.Nombre.Length > 100)
                 return false;
 
             if(string.IsNullOrEmpty(usuario.Correo) || !new EmailAddressAttribute().IsValid(usuario.Correo))
