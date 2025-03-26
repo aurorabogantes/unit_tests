@@ -20,7 +20,8 @@ namespace Laboratorio8.ReglasDeNegocio
             if(producto.Precio <= 0) return false;
 
 
-            if(producto.Stock <= 0) return false;
+            if(producto.Stock < 0 || producto.Stock == null) 
+                return false;
 
             if (producto.FechaCreacion == default)
                 return false;

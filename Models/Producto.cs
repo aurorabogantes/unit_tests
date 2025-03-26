@@ -17,7 +17,7 @@ namespace Laboratorio8.Models
 
         [Required]
         [Range(0, int.MaxValue, ErrorMessage = "El stock no puede ser negativo.")]
-        public int Stock { get; set; }
+        public int? Stock { get; set; }
 
         [Required]
         public DateTime FechaCreacion { get; set; }
